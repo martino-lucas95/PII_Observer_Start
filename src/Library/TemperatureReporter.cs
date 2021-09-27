@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace Observer
 {
     public class TemperatureReporter : IObserver <Temperature>
@@ -9,9 +10,9 @@ namespace Observer
 
         private Temperature last;
 
-        private TemperatureSensor provider;
+        private ISubject <Temperature> provider;
 
-        public void StartReporting(TemperatureSensor provider)
+        public void StartReporting(ISubject <Temperature> provider)
         {
             this.provider = provider;
             this.first = true;

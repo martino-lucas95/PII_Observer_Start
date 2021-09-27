@@ -1,11 +1,10 @@
-using System;
 
 namespace Observer
 {
-    public interface ISubject: IObserver <Temperature>
+    public interface ISubject <T>
     {
-        void Suscribe (IObserver <Temperature> observer);
-        void UnSuscribe (IObserver <Temperature> observer);
+        void Subscribe (IObserver <T> observer);
+        void Unsubscribe (IObserver <T> observer);
     }
 
 }

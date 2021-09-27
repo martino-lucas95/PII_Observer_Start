@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Observer
 {
-    public class TemperatureSensor : IObserver <Temperature>
+    public class TemperatureSensor : ISubject <Temperature>
     {
         // An array of sample data to mimic a temperature device.
         public Nullable<Decimal>[] SampleData = { 14.6m, 14.65m, 14.7m, 14.9m, 14.9m, 15.2m, 15.25m, 15.2m, 15.4m, 15.45m };
