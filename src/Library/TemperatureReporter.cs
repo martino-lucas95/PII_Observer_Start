@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
+
 namespace Observer
 {
-    public class TemperatureReporter
+    public class TemperatureReporter : IObserver <Temperature>
     {
         private bool first = true;
 
